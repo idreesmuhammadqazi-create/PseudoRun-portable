@@ -1540,3 +1540,6 @@ export class Interpreter {
     return String(value);
   }
 }
+
+// Re-export RuntimeError for use in other modules
+export { RuntimeError } from './types';
