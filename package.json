@@ -1,0 +1,87 @@
+{
+  "name": "pseudorun-desktop",
+  "version": "1.0.0",
+  "description": "IGCSE Pseudocode Interpreter - Desktop Application",
+  "main": "electron.js",
+  "homepage": "./",
+  "scripts": {
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "dist": "npm run build && electron-builder --publish=never",
+    "dist-win": "npm run build && electron-builder --win --publish=never",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "igcse",
+    "pseudocode",
+    "interpreter",
+    "education",
+    "desktop",
+    "electron"
+  ],
+  "author": "PseudoRun",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@codemirror/autocomplete": "^6.19.0",
+    "@codemirror/commands": "^6.3.0",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/view": "^6.24.0",
+    "@lezer/highlight": "^1.2.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-reload": "^1.5.0",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "@vitejs/plugin-react": "^4.2.1"
+  },
+  "build": {
+    "appId": "com.pseudorun.desktop",
+    "productName": "PseudoRun",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "electron.js",
+      "preload.js",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PseudoRun"
+    },
+    "fileAssociations": [
+      {
+        "ext": "pseudo",
+        "name": "PseudoCode File",
+        "description": "IGCSE Pseudocode File",
+        "role": "Editor"
+      }
+    ]
+  }
+}
