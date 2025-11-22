@@ -27,7 +27,6 @@ const Toolbar: React.FC<ToolbarProps> = ({
   onExportPDF,
   onRun,
   onDebug,
-  onStop,
   onClearOutput,
   isRunning,
   isDebugMode,
