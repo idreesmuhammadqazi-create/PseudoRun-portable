@@ -13,7 +13,6 @@ const Editor: React.FC<EditorProps> = ({
   onChange,
   lineNumbers,
   wordWrap,
-  theme,
   readOnly = false
 }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
