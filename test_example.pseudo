@@ -1,0 +1,17 @@
+// Simple test pseudocode program
+DECLARE name : STRING
+DECLARE age : INTEGER
+
+OUTPUT "What is your name?"
+INPUT name
+OUTPUT "Hello, " + name
+
+OUTPUT "How old are you?"
+INPUT age
+OUTPUT "You are " + age + " years old"
+
+IF age >= 18 THEN
+    OUTPUT "You are an adult"
+ELSE
+    OUTPUT "You are a minor"
+ENDIF
