@@ -32,11 +32,11 @@ export class FileManager {
     try {
       if (window.electronAPI) {
         const result = await window.electronAPI.readFile(filePath);
-        if (result.success) {
+        if (result.success && result.data) {
           this.addToRecentFiles(filePath);
           return result.data;
         } else {
-          throw new Error(result.error);
+          throw new Error(result.error || 'Failed to read file');
         }
       } else {
         throw new Error('File operations not available in this environment');
