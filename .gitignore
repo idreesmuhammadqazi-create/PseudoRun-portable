@@ -20,7 +20,6 @@ release/
 *.rpm
 
 # Distribution folders
-PseudoRun-Desktop-Windows/
 win-unpacked/
 mac-unpacked/
 linux-unpacked/
