@@ -5,7 +5,6 @@ interface EditorProps {
   onChange: (value: string) => void;
   lineNumbers: boolean;
   wordWrap: boolean;
-  theme: 'light' | 'dark';
   readOnly?: boolean;
 }
 
