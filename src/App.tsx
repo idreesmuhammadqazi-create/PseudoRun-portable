@@ -280,7 +280,6 @@ const AppContent: React.FC<AppContentProps> = () => {
             onChange={handleCodeChange}
             lineNumbers={lineNumbers}
             wordWrap={wordWrap}
-            theme={theme}
             readOnly={isRunning}
           />
         </div>
