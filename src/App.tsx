@@ -260,7 +260,6 @@ const AppContent: React.FC<AppContentProps> = () => {
           onExportPDF={handleExportPDF}
           onRun={handleRun}
           onDebug={handleDebug}
-          onStop={handleStop}
           onClearOutput={handleClearOutput}
           isRunning={isRunning}
           isDebugMode={isDebugMode}
