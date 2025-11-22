@@ -153,6 +153,10 @@ export class FileManager {
     return [...this.recentFiles];
   }
 
+  extractFileName(filePath: string): string {
+    return filePath.split(/[\\/]/).pop() || 'untitled';
+  }
+
   private addToRecentFiles(filePath: string): void {
     const index = this.recentFiles.indexOf(filePath);
     if (index > -1) {
