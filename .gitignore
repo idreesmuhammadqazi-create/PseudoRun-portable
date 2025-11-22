@@ -7,10 +7,23 @@ yarn-error.log*
 # Build outputs
 dist/
 build/
-PseudoRun-Desktop-Windows/
+out/
+release/
+
+# Distribution packages
 *.tar.gz
 *.zip
 *.exe
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Distribution folders
+PseudoRun-Desktop-Windows/
+win-unpacked/
+mac-unpacked/
+linux-unpacked/
 
 # Environment variables
 .env
@@ -63,10 +76,6 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# Electron
-out/
-release/
-
-# Test files
-test_interpreter.js
-*.pseudo
+# Electron specific
+app/
+package-lock.json
