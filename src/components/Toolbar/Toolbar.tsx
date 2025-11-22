@@ -8,7 +8,6 @@ interface ToolbarProps {
   onExportPDF: () => void;
   onRun: () => void;
   onDebug: () => void;
-  onStop: () => void;
   onClearOutput: () => void;
   isRunning: boolean;
   isDebugMode: boolean;
