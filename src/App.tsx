@@ -175,14 +175,7 @@ const AppContent: React.FC<AppContentProps> = () => {
     }
   }, [isDebugMode]);
 
-  const handleStop = useCallback(() => {
-    if (interpreter) {
-      interpreter.disableDebugMode();
-    }
-    setIsRunning(false);
-    setIsDebugMode(false);
-  }, [interpreter]);
-
+  
   const handleClearOutput = useCallback(() => {
     setOutput([]);
     setErrors([]);
