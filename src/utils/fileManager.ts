@@ -195,10 +195,7 @@ export class FileManager {
     }
   }
 
-  private extractFileName(filePath: string): string {
-    return filePath.split(/[\\/]/).pop() || 'untitled';
-  }
-
+  
   async exportToPDF(code: string, title?: string): Promise<void> {
     // PDF export would require additional dependencies
     // For now, we'll create a simple text representation
