@@ -5,8 +5,8 @@
   "main": "electron.js",
   "homepage": "./",
   "scripts": {
-    "electron": "electron .",
-    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron": "electron . --no-sandbox",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron . --no-sandbox\"",
     "dev": "vite",
     "build": "tsc && vite build",
     "dist": "npm run build && electron-builder --publish=never",
