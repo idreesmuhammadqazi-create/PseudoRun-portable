@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
-import { fileManager, ProgramFile } from './utils/fileManager';
+import { fileManager } from './utils/fileManager';
 import { tokenize } from './interpreter/lexer';
 import { parse } from './interpreter/parser';
 import { Interpreter, RuntimeError } from './interpreter/interpreter';
