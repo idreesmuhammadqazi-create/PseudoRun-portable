@@ -81,7 +81,7 @@ export class Interpreter {
     this.fileUploadHandler = fileUploadHandler;
   }
 
-  private defaultInputHandler(variableName: string): Promise<string> {
+  private defaultInputHandler(_variableName: string): Promise<string> {
     // Desktop-compatible input handler - uses electronAPI if available, otherwise returns empty string
     if (typeof window !== 'undefined' && window.electronAPI) {
       // In Electron environment, we should use a proper desktop input dialog
