@@ -66,7 +66,7 @@ export class FileManager {
   async saveProgram(filePath: string, code: string, metadata?: Partial<ProgramMetadata>): Promise<void> {
     const programData: ProgramFile = {
       metadata: {
-        name: this.extractFileName(filePath),
+        name: this.getFileName(filePath),
         author: metadata?.author || 'User',
         created: new Date().toISOString(),
         modified: new Date().toISOString(),
