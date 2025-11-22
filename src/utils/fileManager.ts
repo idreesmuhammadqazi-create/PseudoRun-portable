@@ -87,6 +87,10 @@ export class FileManager {
     await this.writeFile(filePath, content);
   }
 
+  private getFileName(filePath: string): string {
+    return filePath.split(/[\\/]/).pop() || 'untitled';
+  }
+
   async loadProgram(filePath: string): Promise<{ code: string; metadata?: ProgramMetadata }> {
     const content = await this.readFile(filePath);
 
