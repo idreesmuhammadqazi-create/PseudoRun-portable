@@ -121,7 +121,7 @@ export class FileManager {
           ]
         });
 
-        if (!result.canceled && result.filePaths.length > 0) {
+        if (!result.canceled && result.filePaths && result.filePaths.length > 0) {
           return result.filePaths[0];
         }
       }
