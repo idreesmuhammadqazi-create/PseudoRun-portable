@@ -77,4 +77,7 @@ jspm_packages/
 
 # Electron specific
 app/
-package-lock.json
+package-lock.jsonnode_modules/
+dist/
+PseudoRun-Desktop-Windows.tar.gz
+
